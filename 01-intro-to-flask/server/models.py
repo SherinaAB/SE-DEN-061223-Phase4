@@ -12,5 +12,4 @@ db = SQLAlchemy()
 	# tablename = 'Productions'
 	# Columns:
         # title: string, genre: string, budget:float, image:string,director: string, description:string, ongoing:boolean, created_at:date time, updated_at: date time 
-class Production():
 # 2. ✅ navigate to app.py
