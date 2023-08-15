@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-flask = "2.2.2"
+flask = "*"
 flask-sqlalchemy = "2.5.1"
 flask-migrate = "3.1.0"
 importlib-resources = "5.10.0"
@@ -13,6 +13,8 @@ faker = "14.2.0"
 jsonify = "0.5"
 sqlalchemy-serializer = "1.4.1"
 werkzeug = "*"
+migrate = "*"
+alchemy = "*"
 
 [dev-packages]
 

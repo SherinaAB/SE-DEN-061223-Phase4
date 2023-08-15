@@ -10,6 +10,9 @@
 	# `Flask` from `flask`
 	# `Migrate` from `flask_migrate`
 	# db and `Production` from `models`
+from flask import Flask, jsonify, make_response, request
+from flask_migrate import Migrate
+from models import db, Production
 
 # 3. ✅ Initialize the App
     # Add `app = Flask(__name__)`
@@ -20,6 +23,11 @@
     # Set the migrations with `migrate = Migrate(app, db)`
     
     # Finally, initialize the application with `db.init_app(app)`
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] ='sqlite:///app.db'
+app.config['SQLCHEMY_TRACK_MOIDIFICATIONS'] = False
+migrate = Migrate(app,db)
+db.init_app(app)
 
  # 4. ✅ Migrate 
 	# `cd` into the `server` folder
